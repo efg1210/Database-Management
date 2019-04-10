@@ -1,0 +1,48 @@
+/*1*/
+SELECT LAST_NAME, TO_CHAR(BIRTHDATE, 'FMMONTH DD, YYYY')
+FROM F_STAFFS;
+
+/*2*/
+SELECT TO_DATE('January 3, 04', 'Month dd, yyyy')
+FROM DUAL;
+
+/*3*/
+SELECT 'The promotion began on the' || INITCAP(TO_CHAR(START_DATE, 'Ddthsp "of" Month yyyy'))
+FROM F_PROMOTIONAL_MENUS
+WHERE CODE = 110;
+
+/*4*/
+SELECT 'Today is the ' || TO_CHAR(SYSDATE, 'ddthSP "of" Month yyyysp')
+FROM dual;
+
+/*5*/
+SELECT id, FIRST_NAME, LAST_NAME, TO_CHAR(SALARY, '$99,999,999.99')
+FROM F_STAFFS;
+
+/*6*/
+SELECT FIRST_NAME, LAST_NAME, TO_CHAR(SALARY, '$99,999,999.99'), TO_CHAR(SALARY+2000, '$999,999,999.99')
+FROM EMPLOYEES
+WHERE EMPLOYEE_ID = 174;
+
+/*7*/
+SELECT TO_CHAR(START_DATE, 'Day "the" ddth "of" Month YYYY')
+FROM F_PROMOTIONAL_MENUS
+where code = 110;
+
+/*8*/
+SELECT TO_CHAR(TO_DATE('25-Dec-2004', 'dd-Mon-YYYY'), 'fmMonth ddth, YYYY')
+FROM dual;
+
+SELECT upper(TO_CHAR(TO_DATE('25-Dec-2004', 'dd-Mon-YYYY'), 'fmMonth ddth, YYYY'))
+FROM dual;
+
+SELECT lower(TO_CHAR(TO_DATE('25-Dec-2004', 'dd-Mon-YYYY'), 'fmddth month, YYYY'))
+FROM dual;
+
+/*9*/
+SELECT TO_CHAR(LOW_RANGE, '$99,999.99'), TO_CHAR(HIGH_RANGE, '$99,999.99')
+FROM D_PACKAGES;
+
+/*10*/
+SELECT TO_DATE('JUNE192004', 'fxMONTHddyyyy')
+FROM dual;

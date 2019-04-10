@@ -1,0 +1,10 @@
+DROP TABLE price_history;
+DROP TABLE items;
+DROP TABLE inventory_list;
+DROP TABLE ordered_items;
+DROP TABLE orders;
+DROP TABLE customers;
+DROP TABLE sales_rep_addresses;
+DROP TABLE sales_representatives;
+DROP TABLE teams;
+DROP TABLE customers_addresses;

@@ -1,0 +1,33 @@
+CREATE TABLE B_DEPT
+    (
+        dept_id         NUMBER(8),
+        name            VARCHAR2(30),
+        loc_id          NUMBER(4),
+        CONSTRAINT dept_dept_id_pk PRIMARY KEY (dept_id, loc_id)
+    );
+    
+CREATE TABLE B_SUPPLIERS
+    (
+        sup_id          NUMBER(15),
+        sup_name        VARCHAR2(30),
+        contact_name    NUMBER(4),
+        CONSTRAINT sup_sup_id_pk PRIMARY KEY (sup_id, sup_name)
+    );
+    
+CREATE TABLE B_PRODUCTS
+    (
+        product_id      NUMBER(10),
+        sup_id          NUMBER(15),
+        sup_name        VARCHAR2(30),
+        CONSTRAINT pdt_pdt_id_pk PRIMARY KEY (product_id),
+        CONSTRAINT pdt_sup_fk FOREIGN KEY (sup_id, sup_name) REFERENCES B_SUPPLIERS (sup_id, sup_name)
+    );
+    
+CREATE TABLE B_DEPT_SAMPLES
+    (
+        dept_id         NUMBER(8),
+        dept_name       VARCHAR2(30),
+        loc_id          NUMBER(4)
+        CONSTRAINT dse_dse_id_uk UNIQUE (dept_id, dept_name),
+        CONSTRAINT dse_dept_fk FOREIGN KEY (dept_id, dept_name, loc_id) REFERENCES B_DEPT (dept_id, name, loc_id)
+    );
