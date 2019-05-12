@@ -1,0 +1,20 @@
+/*2*/
+CREATE TABLE grad_candidates
+    (student_id NUMBER(6) NOT NULL
+    last_name VARCHAR(50) NOT NULL
+    first_name VARCHAR(20) NOT NULL
+    credits NUMBER(3) NOT NULL
+    graduation_date DATE
+CONSTRAINT GC_id_pk PRIMARY KEY (student_id)
+CONSTRAINT RQ_FK FOREIGN KEY(CREDITS) REFERENCES REQUIREMENTS(CREDITS);
+
+/*3*/
+DESCRIBE GRAD_CANIDATES;
+
+/*4*/
+CREATE TABLE GRANVILLE_table
+AS (SELECT * FROM GRAD_CANIDATES);
+
+/*5*/
+INSERT INTO GRANVILLE_tableS
+VALUES (3, 'Granville', 'Emily', 100, '20-Jun-2020');
