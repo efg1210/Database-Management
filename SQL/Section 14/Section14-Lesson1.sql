@@ -1,0 +1,29 @@
+/*6*/
+CREATE TABLE F_LOCATIONS
+    (id number(10) CONSTRAINT LOC_PK PRIMARY KEY,
+    name VARCHAR(100),
+    date_opened DATE NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    city VARCHAR(30) NOT NULL,
+    zip NUMBER(10) NOT NULL,
+    phone VARCHAR(12),
+    email VARCHAR(50) CONSTRAINT LOC_EML_UK UNIQUE,
+    manager_id NUMBER(10),
+    EMERGENCY_CONTACT VARCHAR(50));
+    
+/*8*/
+DESCRIBE F_LOCATIONS;
+
+/*9*/
+CREATE TABLE F_LOCATIONS
+    (id number(10) CONSTRAINT LOC_PK PRIMARY KEY,
+    name VARCHAR(100),
+    date_opened DATE NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    city VARCHAR(30) NOT NULL,
+    zip NUMBER(10) NOT NULL,
+    phone VARCHAR(12),
+    email VARCHAR(50),
+    manager_id NUMBER(10),
+    EMERGENCY_CONTACT VARCHAR(50)
+    CONSTRAINT f_LOC_EML_UK UNIQUE(email));
