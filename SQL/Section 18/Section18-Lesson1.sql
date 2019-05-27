@@ -1,0 +1,10 @@
+/*3*/
+DELETE FROM D_SONGS WHERE ID = 50;
+INSERT INTO D_SONGS (ID, TITLE, DURATION, ARTIST, TYPE_CODE)
+VALUES (60, "Happy Birthday Sunshine", "4 min", "The Sunsets", 88);
+SAVEPOINT A;
+COMMIT;
+
+/*4*/
+INSERT INTO D_SONGS (ID, TITLE, DURATION, ARTIST, TYPE_CODE)
+VALUES (60, "Happy Birthday Sunshine", "4 min", "The Sunsets", 88);
