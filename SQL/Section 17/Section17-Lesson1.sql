@@ -1,0 +1,27 @@
+/*4*/
+CREATE USER SCOTT
+INDENTIFIED BY TIGER;
+
+GRANT CREATE SESSION
+TO SCOTT;
+
+/*5*/
+GRANT UPDATE, SELECT
+ON d_clients
+TO SCOTT;
+
+/*6*/
+GRANT SELECT
+ON D_SONGS
+TO PUBLIC;
+
+/*7*/
+SELECT * from user_tab_privs_recd;
+
+/*10*/
+GRANT SELECT
+ON copy_employees
+TO USER;
+
+/*11*/
+SELECT * FROM user_col_privs_recd;
