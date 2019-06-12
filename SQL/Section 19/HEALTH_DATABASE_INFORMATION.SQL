@@ -1,0 +1,11 @@
+INSERT INTO HB_DOCTOR
+VALUES('101', 'Martha', 'Jones', 'Travelling space and time', 'The TARDIS', '07700900461');
+
+INSERT INTO HB_HOSPITAL
+VALUES('202', 'The Moon', '098765322', 'hospital');
+
+INSERT INTO HB_DOCTOR_HOSPITAL
+VALUES('101', '202');
+
+INSERT INTO HB_PATIENT
+VALUEs('99999999', 'Clara', 'Oswald', 'The TARDIS', 'TARDIS', 'OSWIN', '5', '99999999');
